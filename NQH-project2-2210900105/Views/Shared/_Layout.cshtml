@@ -135,10 +135,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="@Url.Action("Index", "Cart")">Giỏ Hàng</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("Tutorial", "Home")">Hướng Dẫn</a>
-                    </li>
-
+                    
                     <!-- Kiểm tra trạng thái đăng nhập của người dùng -->
                     @if (Session["Account"] != null || Session["AdminAccount"] != null)
                     {

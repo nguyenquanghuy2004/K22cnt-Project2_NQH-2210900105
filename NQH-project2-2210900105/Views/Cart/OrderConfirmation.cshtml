@@ -1,0 +1,34 @@
+﻿@model NQH_project2_2210900105.Models.ORDERS
+
+<h2>Order Confirmation</h2>
+
+<p>Your order has been placed successfully.</p>
+<p>Order ID: @Model.order_id</p>
+<p>Total Price: @Model.total_price</p>
+<p>Order Date: @Model.order_date</p>
+
+<!-- Display order details (products in the order) -->
+<h3>Order Details:</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var detail in Model.ORDER_DETAIL)
+        {
+            <tr>
+                <td>@detail.PRODUCT.product_name</td>
+                <td>@detail.quantity</td>
+                <td>@detail.product_price</td>
+                <td>@(detail.product_price * detail.quantity)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>Thank you for shopping with us!</p>
