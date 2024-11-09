@@ -15,6 +15,8 @@ namespace NQH_project2_2210900105.Models
     
     public partial class webcuahangthethaoEntities : DbContext
     {
+        internal object PRODUCTs;
+
         public webcuahangthethaoEntities()
             : base("name=webcuahangthethaoEntities")
         {
